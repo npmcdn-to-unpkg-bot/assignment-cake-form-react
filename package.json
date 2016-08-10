@@ -13,16 +13,21 @@
   "homepage": "https://github.com/kevanstannard/assignment-ustwo#readme",
   "devDependencies": {
     "babel-core": "^6.11.4",
+    "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.11.6",
     "casper-chai": "^0.3.0",
     "casperjs": "^1.1.3",
     "chai": "^3.5.0",
     "del": "^2.2.1",
     "eslint": "^3.2.2",
-    "eslint-config-airbnb-base": "^5.0.1",
+    "eslint-config-airbnb": "^10.0.0",
     "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.1.0",
+    "eslint-plugin-react": "^6.0.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-casperjs": "0.0.6",
@@ -30,16 +35,21 @@
     "gulp-stylus": "^2.5.0",
     "gulp-util": "^3.0.7",
     "gulp-webserver": "^0.9.1",
+    "lodash": "^4.14.2",
     "mocha": "^3.0.1",
     "mocha-casperjs": "^0.5.7",
     "run-sequence": "^1.2.2",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-node-externals": "^1.3.3"
   },
   "dependencies": {},
   "eslintConfig": {
-    "extends": "airbnb-base",
+    "parser": "babel-eslint",
+    "extends": "airbnb",
     "globals": {
-      "document": true
+      "document": true,
+      "React": true,
+      "ReactDOM": true
     },
     "rules": {
       "import/no-extraneous-dependencies": [
@@ -47,7 +57,9 @@
         {
           "devDependencies": true
         }
-      ]
+      ],
+      "react/react-in-jsx-scope": 0,
+      "jsx-a11y/label-has-for": 0
     }
   }
 }

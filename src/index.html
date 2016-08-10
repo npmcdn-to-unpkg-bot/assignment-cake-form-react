@@ -15,47 +15,11 @@
 </head>
 <body>
 
-  <form class="cake-enquiry-form">
+  <div id="container"></div>
 
-    <fieldset>
-
-      <legend>Cake Enquiry Form</legend>
-
-      <label>Name:</label>
-      <input type="text" name="name">
-
-      <label>Email:</label>
-      <input type="email" name="email">
-
-      <label>Type of cake:</label>
-      <ul>
-        <li><label><input type="checkbox" name="cake-type-cupcakes">Cupcakes</label></li>
-        <li><label><input type="checkbox" name="cake-type-cheesecakes">Cheesecakes</label></li>
-        <li><label><input type="checkbox" name="cake-type-buttercakes">Buttercakes</label></li>
-        <li><label><input type="checkbox" name="cake-type-mudcakes">Mudcakes</label></li>
-      </ul>
-
-      <label>Celebration type:</label>
-      <ul>
-        <li><label><input type="radio" name="celebration-type" value="birthday">Birthday</label></li>
-        <li><label><input type="radio" name="celebration-type" value="wedding">Wedding</label></li>
-        <li><label><input type="radio" name="celebration-type" value="corporate">Corporate</label></li>
-        <li><label><input type="radio" name="celebration-type" value="other">Other</label></li>
-        <li>
-          <div class="error-message celebration-type-other-error"></div>
-          <label><input type="text" name="celebration-type-other"></label>
-        </li>
-      </ul>
-
-      <label>Tell us about your dream cake:</label>
-      <textarea name="dream-cake" rows="4"></textarea>
-
-      <button type="submit">Send away</button>
-      <button type="reset">Restart</button>
-
-    </fieldset>
-
-  </form>
+  <!-- https://facebook.github.io/react/downloads.html#individual-downloads -->
+  <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+  <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
 
   <script src="/bundle.js"></script>
 
