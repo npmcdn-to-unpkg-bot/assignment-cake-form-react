@@ -6,7 +6,7 @@ import find from 'lodash/find';
 export default class CakeEnquiryForm extends React.Component {
   constructor() {
     super();
-    this.initState();
+    this.state = this.getResetState();
   }
 
   onCelebrationTypeOtherChange = (e) => {
@@ -25,7 +25,7 @@ export default class CakeEnquiryForm extends React.Component {
   }
 
   onReset = () => {
-    this.initState();
+    this.setState(this.getResetState());
   }
 
   getError(field) {
@@ -41,8 +41,8 @@ export default class CakeEnquiryForm extends React.Component {
     return this.getError(field).message || '';
   }
 
-  initState() {
-    this.state = {
+  getResetState() {
+    return {
       errors: [],
       celebrationType: null,
     };
@@ -59,7 +59,10 @@ export default class CakeEnquiryForm extends React.Component {
     if (this.state.celebrationType === 'other') {
       const celebrationTypeOther = trim(this.celebrationTypeOtherEl.value);
       if (!celebrationTypeOther) {
-        errors.push({ field: 'celebration-type-other', message: 'Please enter your celebration type' });
+        errors.push({
+          field: 'celebration-type-other',
+          message: 'Please enter your celebration type',
+        });
       }
     }
 
