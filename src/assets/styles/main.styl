@@ -1,0 +1,79 @@
+$mainTextColor = #f9f9f9
+$mainBackgroundColor = #374550
+$enquiryBorderColor = #a3aab2
+$enquiryErrorColor = #ff0000
+$enquiryBackgroundColor = #69737c
+$enquiryFieldSpacing = 20px
+
+body
+  font-family: 'Open Sans', sans-serif
+  font-size: 14px
+  background-color: $mainBackgroundColor
+  color: $mainTextColor
+
+.cake-enquiry-form
+
+  max-width: 460px
+  margin: 0 auto
+  box-sizing: border-box
+
+  fieldset
+    border: 1px solid $enquiryBorderColor
+    padding: 30px 30px 40px 30px
+    margin: 20px
+    line-height: 26px
+
+    legend
+      font-size: 26px
+      font-weight: bold
+      background-color: $mainBackgroundColor
+      padding: 0 10px
+      white-space: normal
+
+  label
+    display: block
+    font-weight: bold
+
+  ul
+    margin-bottom: $enquiryFieldSpacing
+
+    label
+      font-weight: normal
+
+    input
+      margin-right: 10px
+
+  textarea,
+  input[type=text],
+  input[type=email]
+    display: block
+    background-color: $enquiryBackgroundColor
+    border: 1px solid $enquiryBorderColor
+    margin-bottom: $enquiryFieldSpacing
+    width: 100%
+    padding: 10px
+    color: $mainTextColor
+    box-sizing: border-box
+
+  textarea.error,
+  input[type=text].error,
+  input[type=email].error
+    border-color: $enquiryErrorColor
+
+  .error-message
+    color: $enquiryErrorColor
+
+  button[type=submit],
+  button[type=reset]
+    background-color: $mainBackgroundColor
+    color: $mainTextColor
+    padding: 5px 10px
+    cursor: pointer
+
+  button[type=submit]
+    border: 2px solid $mainTextColor
+    font-weight: bold
+
+  button[type=reset]
+    border: 0
+    text-decoration: underline
