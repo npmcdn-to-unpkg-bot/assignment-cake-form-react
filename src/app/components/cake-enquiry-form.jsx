@@ -6,9 +6,7 @@ import find from 'lodash/find';
 export default class CakeEnquiryForm extends React.Component {
   constructor() {
     super();
-    this.state = {
-      errors: [],
-    };
+    this.initState();
   }
 
   onCelebrationTypeOtherChange = (e) => {
@@ -26,6 +24,10 @@ export default class CakeEnquiryForm extends React.Component {
     }
   }
 
+  onReset = () => {
+    this.initState();
+  }
+
   getError(field) {
     const e = find(this.state.errors, (error) => error.field === field);
     return e || {};
@@ -37,6 +39,13 @@ export default class CakeEnquiryForm extends React.Component {
 
   getErrorMessage(field) {
     return this.getError(field).message || '';
+  }
+
+  initState() {
+    this.state = {
+      errors: [],
+      celebrationType: null,
+    };
   }
 
   clearErrors() {
@@ -104,7 +113,7 @@ export default class CakeEnquiryForm extends React.Component {
           <textarea name="dream-cake" rows="4" />
 
           <button type="submit" onClick={this.onSubmit}>Send away</button>
-          <button type="reset">Restart</button>
+          <button type="reset" onClick={this.onReset}>Restart</button>
 
         </fieldset>
 
