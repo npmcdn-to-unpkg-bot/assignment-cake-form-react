@@ -9,7 +9,7 @@ export default class CakeEnquiryForm extends React.Component {
     this.state = this.getResetState();
   }
 
-  onCelebrationTypeOtherChange = (e) => {
+  onCelebrationTypeClick = (e) => {
     this.setState({
       celebrationType: e.currentTarget.value,
     });
@@ -93,10 +93,10 @@ export default class CakeEnquiryForm extends React.Component {
 
           <label>Celebration type:</label>
           <ul>
-            <li><label><input type="radio" name="celebration-type" value="birthday" onClick={this.onCelebrationTypeOtherChange} />Birthday</label></li>
-            <li><label><input type="radio" name="celebration-type" value="wedding" onClick={this.onCelebrationTypeOtherChange} />Wedding</label></li>
-            <li><label><input type="radio" name="celebration-type" value="corporate" onClick={this.onCelebrationTypeOtherChange} />Corporate</label></li>
-            <li><label><input type="radio" name="celebration-type" value="other" onClick={this.onCelebrationTypeOtherChange} />Other</label></li>
+            <li><label><input type="radio" name="celebration-type" value="birthday" onClick={this.onCelebrationTypeClick} />Birthday</label></li>
+            <li><label><input type="radio" name="celebration-type" value="wedding" onClick={this.onCelebrationTypeClick} />Wedding</label></li>
+            <li><label><input type="radio" name="celebration-type" value="corporate" onClick={this.onCelebrationTypeClick} />Corporate</label></li>
+            <li><label><input type="radio" name="celebration-type" value="other" onClick={this.onCelebrationTypeClick} />Other</label></li>
             <li>
               <div className="error-message celebration-type-other-error">
                 {this.getErrorMessage('celebration-type-other')}
