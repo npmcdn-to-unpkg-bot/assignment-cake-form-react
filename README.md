@@ -34,7 +34,7 @@ Currently using the [Airbnb ESLint config](https://www.npmjs.com/package/eslint-
 ### Code
 
 * CSS is written in [Stylus](http://stylus-lang.com/)
-* JavaScript is written in ES6 and transpiled using [Babel](https://babeljs.io/)
+* JavaScript is written in ES6/ES7 and transpiled using [Babel](https://babeljs.io/)
 
 ### Browser Compatibility
 
@@ -50,7 +50,7 @@ Currently using the [Airbnb ESLint config](https://www.npmjs.com/package/eslint-
 
 * Add production builds that minify the JS/CSS and hash the generated file names.
 * See if there is a better way to write Casper tests in ES6.
-* Consider adding unit tests (maybe simpler when using a framework)
+* Consider adding unit tests
 
 ## Note about PhantomJS
 
