@@ -1,4 +1,4 @@
-# ustwo Assignment
+# ustwo Assignment (React)
 
 ## Running the assignment
 
